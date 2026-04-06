@@ -822,6 +822,226 @@ h4 { font-size: 1.15rem; }
   color: #6b7280;
 }
 
+/* ========== Wochenplan Generator ========== */
+.wochenplan-section {
+  background: linear-gradient(135deg, #ecfdf5, #ccfbf1);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.wochenplan-section h2 {
+  margin-bottom: 0.5rem;
+}
+
+.wochenplan-section > p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.plan-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.plan-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.plan-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+.plan-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+#print-plan {
+  display: none;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.plan-day {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.plan-day-header {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ede9fe;
+}
+
+.plan-meal {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.plan-meal:last-of-type {
+  border-bottom: none;
+}
+
+.plan-meal-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.15rem;
+}
+
+.plan-meal a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+  display: block;
+}
+
+.plan-meal a:hover {
+  color: var(--primary);
+}
+
+.plan-meal-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.plan-day-total {
+  text-align: right;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--primary);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 2px solid #ede9fe;
+}
+
+.plan-summary {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ========== Portionsrechner ========== */
+.portion-adjuster {
+  margin-bottom: 1rem;
+}
+
+.portion-control {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f5f3ff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+}
+
+.portion-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.portion-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  background: white;
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.portion-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.portion-count {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  min-width: 30px;
+  text-align: center;
+}
+
+/* ========== Category Filter Tabs ========== */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-tab {
+  padding: 0.5rem 1.25rem;
+  border-radius: 25px;
+  border: 2px solid var(--border);
+  background: white;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-tab:hover,
+.filter-tab.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* ========== Card Image with Food Emojis ========== */
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.15), transparent);
+}
+
 /* ========== Responsive ========== */
 @media (max-width: 968px) {
   .content-layout {
@@ -881,5 +1101,18 @@ h4 { font-size: 1.15rem; }
   .article-content {
     padding: 1.5rem;
     margin: -1rem 1rem 2rem;
+  }
+
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wochenplan-section {
+    padding: 1.5rem;
+  }
+
+  .plan-options {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

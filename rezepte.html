@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PCOS-freundliche Rezepte - Täglich ein neues, entzündungshemmendes und blutzuckerfreundliches Rezept.">
+  <meta name="description" content="PCOS-freundliche Rezepte - Täglich ein neues, entzündungshemmendes und blutzuckerfreundliches Rezept. Mit Wochenplan-Generator.">
   <title>PCOS-Rezepte - PCOS Verstehen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -31,160 +31,458 @@
   <div class="page-header recipe-header">
     <div class="container">
       <h1>PCOS-freundliche Rezepte</h1>
-      <p>Täglich ein neues Rezept - entzündungshemmend, blutzuckerfreundlich und richtig lecker.</p>
+      <p>37 leckere Rezepte - entzündungshemmend, blutzuckerfreundlich und täglich wachsend.</p>
     </div>
   </div>
 
   <div class="container">
-    <div class="content-layout section">
 
-      <div>
-        <div class="info-banner" style="margin-bottom: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #ecfdf5, #ccfbf1);">
-          <h3 style="margin-bottom: 0.5rem;">&#127793; Unsere Rezept-Philosophie</h3>
-          <p style="margin: 0; font-size: 0.95rem;">Alle Rezepte sind arm an raffiniertem Zucker, reich an Ballaststoffen und enthalten entzündungshemmende Zutaten. Sie sind auf einen stabilen Blutzucker ausgelegt und unterstützen die Hormonbalance.</p>
+    <!-- ========== WOCHENPLAN GENERATOR ========== -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="wochenplan-section" id="wochenplan-app">
+        <h2>&#128197; Dein PCOS-Wochenplan</h2>
+        <p>Erstelle dir mit einem Klick einen individuellen Wochenplan aus unseren PCOS-freundlichen Rezepten.</p>
+
+        <div class="plan-options">
+          <label class="plan-option">
+            <input type="checkbox" id="pref-vegetarisch">
+            <span>Nur vegetarische Rezepte</span>
+          </label>
+          <label class="plan-option">
+            <input type="checkbox" id="pref-schnell">
+            <span>Nur schnelle Rezepte (max. 20 Min.)</span>
+          </label>
         </div>
 
-        <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
-
-          <!-- Rezept 1 -->
-          <div class="card">
-            <div class="card-image recipe">&#129367;</div>
-            <div class="card-body">
-              <div class="card-meta">
-                <span class="card-tag tag-recipe">Mittagessen</span>
-                <span>6. April 2026</span>
-              </div>
-              <h3>Anti-entzündliche Kurkuma-Bowl</h3>
-              <p>Quinoa, geröstetes Gemüse, Kichererbsen und ein cremiges Kurkuma-Tahini-Dressing.</p>
-              <a href="rezepte/kurkuma-bowl.html" class="card-link">Zum Rezept</a>
-            </div>
-          </div>
-
-          <!-- Rezept 2 -->
-          <div class="card">
-            <div class="card-image recipe">&#129382;</div>
-            <div class="card-body">
-              <div class="card-meta">
-                <span class="card-tag tag-recipe">Frühstück</span>
-                <span>5. April 2026</span>
-              </div>
-              <h3>Beeren-Chia-Pudding mit Walnüssen</h3>
-              <p>Über Nacht eingeweichte Chiasamen mit gemischten Beeren, Zimt und Omega-3-reichen Walnüssen.</p>
-              <a href="rezepte/chia-pudding.html" class="card-link">Zum Rezept</a>
-            </div>
-          </div>
-
-          <!-- Rezept 3 -->
-          <div class="card">
-            <div class="card-image recipe">&#129360;</div>
-            <div class="card-body">
-              <div class="card-meta">
-                <span class="card-tag tag-recipe">Abendessen</span>
-                <span>4. April 2026</span>
-              </div>
-              <h3>Lachs mit Brokkoli und Süßkartoffel</h3>
-              <p>Omega-3-reicher Lachs mit gedämpftem Brokkoli und gebackener Süßkartoffel - ein Klassiker.</p>
-              <a href="rezepte/lachs-brokkoli.html" class="card-link">Zum Rezept</a>
-            </div>
-          </div>
-
-          <!-- Rezept 4 -->
-          <div class="card">
-            <div class="card-image recipe">&#129361;</div>
-            <div class="card-body">
-              <div class="card-meta">
-                <span class="card-tag tag-recipe">Snack</span>
-                <span>3. April 2026</span>
-              </div>
-              <h3>Grüner Smoothie mit Spinat und Avocado</h3>
-              <p>Nährstoffbombe aus Spinat, Avocado, Ingwer und Zitrone - perfekt gegen das Nachmittagstief.</p>
-              <a href="rezepte/gruener-smoothie.html" class="card-link">Zum Rezept</a>
-            </div>
-          </div>
-
-          <!-- Rezept 5 -->
-          <div class="card">
-            <div class="card-image recipe">&#127858;</div>
-            <div class="card-body">
-              <div class="card-meta">
-                <span class="card-tag tag-recipe">Mittagessen</span>
-                <span>2. April 2026</span>
-              </div>
-              <h3>Linsensuppe mit Kurkuma und Ingwer</h3>
-              <p>Wärmende rote Linsensuppe mit entzündungshemmenden Gewürzen - einfach und sättigend.</p>
-              <a href="rezepte/linsensuppe.html" class="card-link">Zum Rezept</a>
-            </div>
-          </div>
-
-          <!-- Rezept 6 -->
-          <div class="card">
-            <div class="card-image recipe">&#129388;</div>
-            <div class="card-body">
-              <div class="card-meta">
-                <span class="card-tag tag-recipe">Frühstück</span>
-                <span>1. April 2026</span>
-              </div>
-              <h3>Buchweizen-Pfannkuchen mit Blaubeeren</h3>
-              <p>Glutenfreie Pfannkuchen aus Buchweizenmehl mit frischen Blaubeeren und Mandelmus.</p>
-              <a href="rezepte/buchweizen-pfannkuchen.html" class="card-link">Zum Rezept</a>
-            </div>
-          </div>
-
-          <!-- Rezept 7 -->
-          <div class="card">
-            <div class="card-image recipe">&#127869;</div>
-            <div class="card-body">
-              <div class="card-meta">
-                <span class="card-tag tag-recipe">Abendessen</span>
-                <span>31. März 2026</span>
-              </div>
-              <h3>Zucchini-Nudeln mit Pesto und Pinienkernen</h3>
-              <p>Low-Carb Zoodles mit selbstgemachtem Basilikum-Pesto und gerösteten Pinienkernen.</p>
-              <a href="rezepte/zucchini-nudeln.html" class="card-link">Zum Rezept</a>
-            </div>
-          </div>
+        <div class="plan-buttons">
+          <button id="generate-plan" class="btn btn-primary">&#127922; Wochenplan erstellen</button>
+          <button id="print-plan" class="btn btn-outline">&#128424; Ausdrucken</button>
         </div>
+
+        <div id="plan-output"></div>
+      </div>
+    </section>
+
+    <!-- ========== REZEPTE ÜBERSICHT ========== -->
+    <section class="section" style="padding-top: 0;">
+
+      <div class="info-banner" style="margin-bottom: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #ecfdf5, #ccfbf1);">
+        <h3 style="margin-bottom: 0.5rem;">&#127793; Unsere Rezept-Philosophie</h3>
+        <p style="margin: 0; font-size: 0.95rem;">Alle Rezepte sind arm an raffiniertem Zucker, reich an Ballaststoffen und enthalten entzündungshemmende Zutaten. Sie sind auf einen stabilen Blutzucker ausgelegt und unterstützen die Hormonbalance.</p>
       </div>
 
-      <aside class="sidebar">
-        <div class="sidebar-widget">
-          <h3>&#127860; Kategorien</h3>
-          <ul>
-            <li><a href="#">Frühstück</a></li>
-            <li><a href="#">Mittagessen</a></li>
-            <li><a href="#">Abendessen</a></li>
-            <li><a href="#">Snacks</a></li>
-            <li><a href="#">Getränke &amp; Smoothies</a></li>
-            <li><a href="#">Meal Prep</a></li>
-          </ul>
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" id="recipe-filters">
+        <button class="filter-tab active" data-filter="alle">Alle (37)</button>
+        <button class="filter-tab" data-filter="fruehstueck">Frühstück (10)</button>
+        <button class="filter-tab" data-filter="mittagessen">Mittagessen (10)</button>
+        <button class="filter-tab" data-filter="abendessen">Abendessen (10)</button>
+        <button class="filter-tab" data-filter="snack">Snacks &amp; Getränke (7)</button>
+      </div>
+
+      <div class="card-grid" id="recipe-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+
+        <!-- ===== FRÜHSTÜCK ===== -->
+        <div class="card" data-category="fruehstueck">
+          <div class="card-image recipe" style="font-size:3rem;">&#129382;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Frühstück</span><span>6. Apr.</span></div>
+            <h3>Overnight Oats mit Zimt und Äpfeln</h3>
+            <p>Haferflocken über Nacht mit Zimt, Apfelstücken und Walnüssen - perfekter Start in den Tag.</p>
+            <a href="rezepte/overnight-oats.html" class="card-link">Zum Rezept</a>
+          </div>
         </div>
 
-        <div class="sidebar-widget" style="background: linear-gradient(135deg, #ecfdf5, #ccfbf1); border: none;">
-          <h3>&#128161; PCOS-Ernährungstipps</h3>
-          <ul style="font-size: 0.9rem; color: var(--text-light);">
-            <li style="border: none; padding: 0.3rem 0;">&#10004; Niedrigen glykämischen Index bevorzugen</li>
-            <li style="border: none; padding: 0.3rem 0;">&#10004; Protein zu jeder Mahlzeit</li>
-            <li style="border: none; padding: 0.3rem 0;">&#10004; Omega-3-Fettsäuren integrieren</li>
-            <li style="border: none; padding: 0.3rem 0;">&#10004; Raffinierten Zucker reduzieren</li>
-            <li style="border: none; padding: 0.3rem 0;">&#10004; Ballaststoffe erhöhen</li>
-          </ul>
+        <div class="card" data-category="fruehstueck">
+          <div class="card-image recipe" style="font-size:3rem;">&#127859;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Frühstück</span><span>5. Apr.</span></div>
+            <h3>Rührei mit Avocado und Tomaten</h3>
+            <p>Proteinreiches Frühstück mit gesunden Fetten und frischen Tomaten.</p>
+            <a href="rezepte/ruehrei-avocado.html" class="card-link">Zum Rezept</a>
+          </div>
         </div>
 
-        <div class="sidebar-widget">
-          <h3>&#127942; Top-Zutaten bei PCOS</h3>
-          <ul>
-            <li><a href="#">Kurkuma</a></li>
-            <li><a href="#">Zimt</a></li>
-            <li><a href="#">Leinsamen</a></li>
-            <li><a href="#">Lachs &amp; Makrele</a></li>
-            <li><a href="#">Blaubeeren</a></li>
-            <li><a href="#">Walnüsse</a></li>
-          </ul>
+        <div class="card" data-category="fruehstueck">
+          <div class="card-image recipe" style="font-size:3rem;">&#127846;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Frühstück</span><span>4. Apr.</span></div>
+            <h3>Griechischer Joghurt mit Granola</h3>
+            <p>Proteinreicher Joghurt mit selbstgemachtem Nuss-Samen-Granola.</p>
+            <a href="rezepte/joghurt-granola.html" class="card-link">Zum Rezept</a>
+          </div>
         </div>
-      </aside>
 
-    </div>
+        <div class="card" data-category="fruehstueck">
+          <div class="card-image recipe" style="font-size:3rem;">&#129374;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Frühstück</span><span>3. Apr.</span></div>
+            <h3>Haferflocken-Bananen-Pancakes</h3>
+            <p>Nur drei Grundzutaten, kein Mehl, kein Zucker - fluffig und lecker.</p>
+            <a href="rezepte/haferflocken-pancakes.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="fruehstueck">
+          <div class="card-image recipe" style="font-size:3rem;">&#129370;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Frühstück</span><span>2. Apr.</span></div>
+            <h3>Spinat-Feta-Omelett</h3>
+            <p>Proteinreich mit Blattgemüse und Feta - hält den Blutzucker stabil.</p>
+            <a href="rezepte/spinat-omelett.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="fruehstueck">
+          <div class="card-image recipe" style="font-size:3rem;">&#127808;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Frühstück</span><span>1. Apr.</span></div>
+            <h3>Quinoa-Frühstücksbrei mit Beeren</h3>
+            <p>Warmer Quinoa-Brei mit Zimt, Beeren und Walnüssen.</p>
+            <a href="rezepte/quinoa-fruehstueck.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="fruehstueck">
+          <div class="card-image recipe" style="font-size:3rem;">&#127861;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Frühstück</span><span>31. Mär.</span></div>
+            <h3>Grüne Smoothie Bowl mit Matcha</h3>
+            <p>Antioxidantien-Power mit Matcha, Spinat und buntem Topping.</p>
+            <a href="rezepte/smoothie-bowl.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="fruehstueck">
+          <div class="card-image recipe" style="font-size:3rem;">&#129386;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Frühstück</span><span>30. Mär.</span></div>
+            <h3>Vollkorn-Avocado-Toast mit Ei</h3>
+            <p>Der Klassiker - PCOS-optimiert mit Vollkornbrot und gesunden Fetten.</p>
+            <a href="rezepte/avocado-toast.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="fruehstueck">
+          <div class="card-image recipe" style="font-size:3rem;">&#129382;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Frühstück</span><span>29. Mär.</span></div>
+            <h3>Beeren-Chia-Pudding mit Walnüssen</h3>
+            <p>Über Nacht eingeweichte Chiasamen mit Beeren und Omega-3-reichen Walnüssen.</p>
+            <a href="rezepte/chia-pudding.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="fruehstueck">
+          <div class="card-image recipe" style="font-size:3rem;">&#129388;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Frühstück</span><span>28. Mär.</span></div>
+            <h3>Buchweizen-Pfannkuchen mit Blaubeeren</h3>
+            <p>Glutenfrei mit frischen Blaubeeren und Mandelmus.</p>
+            <a href="rezepte/buchweizen-pfannkuchen.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <!-- ===== MITTAGESSEN ===== -->
+        <div class="card" data-category="mittagessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#129367;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Mittagessen</span><span>6. Apr.</span></div>
+            <h3>Anti-entzündliche Kurkuma-Bowl</h3>
+            <p>Quinoa, geröstetes Gemüse, Kichererbsen und cremiges Kurkuma-Tahini-Dressing.</p>
+            <a href="rezepte/kurkuma-bowl.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="mittagessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#129363;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Mittagessen</span><span>5. Apr.</span></div>
+            <h3>Hähnchen-Gemüse-Wok mit Ingwer</h3>
+            <p>Schnelles Wok-Gericht mit buntem Gemüse und frischem Ingwer.</p>
+            <a href="rezepte/haehnchen-wok.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="mittagessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#129367;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Mittagessen</span><span>4. Apr.</span></div>
+            <h3>Mediterraner Kichererbsen-Salat</h3>
+            <p>Mit Oliven, Gurke, Tomaten und Feta - Mittelmeer-Feeling pur.</p>
+            <a href="rezepte/kichererbsen-salat.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="mittagessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#127807;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Mittagessen</span><span>3. Apr.</span></div>
+            <h3>Quinoa-Taboulé mit frischen Kräutern</h3>
+            <p>Frischer Salat mit Petersilie, Minze und Zitrone.</p>
+            <a href="rezepte/quinoa-taboule.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="mittagessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#127835;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Mittagessen</span><span>2. Apr.</span></div>
+            <h3>Süßkartoffel-Kokos-Curry</h3>
+            <p>Cremiges Curry mit Süßkartoffeln, Spinat und Kokosmilch.</p>
+            <a href="rezepte/suesskartoffel-curry.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="mittagessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#129424;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Mittagessen</span><span>1. Apr.</span></div>
+            <h3>Thunfisch-Avocado-Bowl</h3>
+            <p>Proteinreich mit Omega-3, Edamame und Sesam-Dressing.</p>
+            <a href="rezepte/thunfisch-bowl.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="mittagessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#129370;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Mittagessen</span><span>31. Mär.</span></div>
+            <h3>Bunte Gemüse-Frittata</h3>
+            <p>Einfach, proteinreich und perfekt für Meal Prep.</p>
+            <a href="rezepte/gemuese-frittata.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="mittagessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#127790;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Mittagessen</span><span>30. Mär.</span></div>
+            <h3>Rote-Bete-Hummus-Wrap</h3>
+            <p>Farbenfroher Wrap mit selbstgemachtem Hummus und knackigem Gemüse.</p>
+            <a href="rezepte/hummus-wrap.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="mittagessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#129361;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Mittagessen</span><span>29. Mär.</span></div>
+            <h3>Blumenkohl-Reis-Bowl mit Erdnuss-Sauce</h3>
+            <p>Low-Carb Bowl mit cremiger Erdnuss-Sauce.</p>
+            <a href="rezepte/blumenkohl-reis.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="mittagessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#127858;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Mittagessen</span><span>28. Mär.</span></div>
+            <h3>Linsensuppe mit Kurkuma und Ingwer</h3>
+            <p>Wärmend, sättigend und voller entzündungshemmender Gewürze.</p>
+            <a href="rezepte/linsensuppe.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <!-- ===== ABENDESSEN ===== -->
+        <div class="card" data-category="abendessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#129360;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Abendessen</span><span>6. Apr.</span></div>
+            <h3>Lachs mit Brokkoli und Süßkartoffel</h3>
+            <p>Omega-3-Powermahlzeit mit gedämpftem Brokkoli.</p>
+            <a href="rezepte/lachs-brokkoli.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="abendessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#127837;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Abendessen</span><span>5. Apr.</span></div>
+            <h3>Putenbrust mit grünem Spargel</h3>
+            <p>Leicht und proteinreich - perfekt für den Abend.</p>
+            <a href="rezepte/putenbrust-spargel.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="abendessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#129424;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Abendessen</span><span>4. Apr.</span></div>
+            <h3>Garnelen mit Pak Choi und Sesam</h3>
+            <p>Asiatisch inspiriert mit Sesamöl und frischem Ingwer.</p>
+            <a href="rezepte/garnelen-pak-choi.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="abendessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#129472;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Abendessen</span><span>3. Apr.</span></div>
+            <h3>Low-Carb Auberginen-Lasagne</h3>
+            <p>Aubergine statt Nudelplatten - cremig und sättigend.</p>
+            <a href="rezepte/auberginen-lasagne.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="abendessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#129367;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Abendessen</span><span>2. Apr.</span></div>
+            <h3>Hähnchen-Brokkoli-Auflauf</h3>
+            <p>Einfacher Auflauf mit cremiger Kokosmilch-Sauce.</p>
+            <a href="rezepte/haehnchen-auflauf.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="abendessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#127798;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Abendessen</span><span>1. Apr.</span></div>
+            <h3>Gefüllte Paprika mit Quinoa und Feta</h3>
+            <p>Bunte Paprika mit würziger Quinoa-Bohnen-Füllung.</p>
+            <a href="rezepte/gefuellte-paprika.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="abendessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#128031;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Abendessen</span><span>31. Mär.</span></div>
+            <h3>Kabeljau mit Zitronen-Kräuter-Kruste</h3>
+            <p>Zarter Fisch mit knuspriger Mandel-Kräuter-Kruste.</p>
+            <a href="rezepte/kabeljau-kraeuter.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="abendessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#127834;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Abendessen</span><span>30. Mär.</span></div>
+            <h3>Kürbis-Risotto mit Blumenkohlreis</h3>
+            <p>Cremiges Comfort Food mit 80% weniger Kohlenhydraten.</p>
+            <a href="rezepte/kuerbis-risotto.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="abendessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#129385;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Abendessen</span><span>29. Mär.</span></div>
+            <h3>Rinderstreifen mit Paprika und Brokkoli</h3>
+            <p>Eisenreiches Pfannengericht mit knackigem Gemüse.</p>
+            <a href="rezepte/rinderstreifen-paprika.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="abendessen">
+          <div class="card-image recipe" style="font-size:3rem;">&#127869;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Abendessen</span><span>28. Mär.</span></div>
+            <h3>Zucchini-Nudeln mit Pesto</h3>
+            <p>Low-Carb Zoodles mit selbstgemachtem Basilikum-Pesto.</p>
+            <a href="rezepte/zucchini-nudeln.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <!-- ===== SNACKS & GETRÄNKE ===== -->
+        <div class="card" data-category="snack">
+          <div class="card-image recipe" style="font-size:3rem;">&#129361;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Snack</span><span>6. Apr.</span></div>
+            <h3>Grüner Smoothie mit Spinat und Avocado</h3>
+            <p>Nährstoffbombe gegen das Nachmittagstief.</p>
+            <a href="rezepte/gruener-smoothie.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="snack">
+          <div class="card-image recipe" style="font-size:3rem;">&#127851;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Snack</span><span>5. Apr.</span></div>
+            <h3>Energie-Bällchen mit Datteln und Kakao</h3>
+            <p>No-Bake Energiekugeln mit Nüssen und Haferflocken.</p>
+            <a href="rezepte/energie-baellchen.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="snack">
+          <div class="card-image recipe" style="font-size:3rem;">&#129372;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Snack</span><span>4. Apr.</span></div>
+            <h3>Würzig geröstete Kichererbsen</h3>
+            <p>Knuspriger Snack mit Kurkuma und Paprika.</p>
+            <a href="rezepte/geroestete-kichererbsen.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="snack">
+          <div class="card-image recipe" style="font-size:3rem; background: linear-gradient(135deg, #d97706, #f59e0b);">&#9749;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Getränk</span><span>3. Apr.</span></div>
+            <h3>Golden Milk - Kurkuma-Latte</h3>
+            <p>Warmes entzündungshemmendes Getränk mit Kurkuma und Zimt.</p>
+            <a href="rezepte/golden-milk.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="snack">
+          <div class="card-image recipe" style="font-size:3rem;">&#129361;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Snack</span><span>2. Apr.</span></div>
+            <h3>Guacamole mit bunten Gemüsesticks</h3>
+            <p>Cremige Guacamole mit knackigem Rohkost-Gemüse.</p>
+            <a href="rezepte/guacamole.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="snack">
+          <div class="card-image recipe" style="font-size:3rem;">&#129473;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Snack</span><span>1. Apr.</span></div>
+            <h3>Mandel-Kokos-Riegel ohne Zucker</h3>
+            <p>Selbstgemachte Energieriegel - perfekt für unterwegs.</p>
+            <a href="rezepte/mandel-kokos-riegel.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+        <div class="card" data-category="snack">
+          <div class="card-image recipe" style="font-size:3rem; background: linear-gradient(135deg, #d97706, #f59e0b);">&#127861;</div>
+          <div class="card-body">
+            <div class="card-meta"><span class="card-tag tag-recipe">Getränk</span><span>31. Mär.</span></div>
+            <h3>Anti-Entzündungs-Tee</h3>
+            <p>Heilender Tee mit Ingwer, Kurkuma und Zimt.</p>
+            <a href="rezepte/anti-entzuendungs-tee.html" class="card-link">Zum Rezept</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
   </div>
+
+  <!-- Filter Script -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var filters = document.querySelectorAll('.filter-tab');
+    var cards = document.querySelectorAll('#recipe-grid .card');
+
+    filters.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filters.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var filter = btn.getAttribute('data-filter');
+
+        cards.forEach(function(card) {
+          if (filter === 'alle' || card.getAttribute('data-category') === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+  </script>
 
   <footer class="footer">
     <div class="container">
